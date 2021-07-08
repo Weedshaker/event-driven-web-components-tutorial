@@ -1,0 +1,16 @@
+{
+  "name": "event-driven-web-components-tutorial",
+  "version": "0.0.1",
+  "description": "Tutorials covering an event driven architecture with web components.",
+  "main": "./index.html",
+  "scripts": {
+    "fix": "standard --fix",
+    "serve": "live-server --port=4200 --host=localhost"
+  },
+  "author": "weedshaker@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "*",
+    "standard": "*"
+  }
+}
