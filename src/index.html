@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Driven Web Components Tutorial</title>
+</head>
+<body>
+  <tutorial-one></tutorial-one>
+  <tutorial-two></tutorial-two>
+  <tutorial-three></tutorial-three>
+  <tutorial-four></tutorial-four>
+  <script rel=preload type=module>
+    import('./components/pages/TutorialOne.js').then(module => customElements.define('tutorial-one', module.default))
+    import('./components/pages/TutorialTwo.js').then(module => customElements.define('tutorial-two', module.default))
+    import('./components/pages/TutorialThree.js').then(module => customElements.define('tutorial-three', module.default))
+    import('./components/pages/TutorialFour.js').then(module => customElements.define('tutorial-four', module.default))
+  </script>
+</body>
+</html>

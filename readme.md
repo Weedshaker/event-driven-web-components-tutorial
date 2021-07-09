@@ -3,6 +3,10 @@
 > Under construction... here are gonna be multiple topics covered.
 
 
+### TODO
+
+ - Next up is Tutorial 5 - ShadowDom + https://github.com/Weedshaker/event-driven-web-components-prototypes/blob/master/src/Shadow.js
+
 ### Articles
 
 - [Build an Event Driven TodoMVC App with 8 lightweight VanillaJS Web Components](https://dev.to/weedshaker/build-an-event-driven-todomvc-app-with-8-lightweight-vanillajs-web-components-5b65)
