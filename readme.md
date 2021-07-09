@@ -5,7 +5,8 @@
 
 ### TODO
 
- - Next up is Tutorial 5 - ShadowDom + https://github.com/Weedshaker/event-driven-web-components-prototypes/blob/master/src/Shadow.js
+ - Tutorial 5 - ShadowDom + https://github.com/Weedshaker/event-driven-web-components-prototypes/blob/master/src/Shadow.js
+ - further Tutorials: ShadowDom + CSS variables, SideNavigation + Routing, Video Component, Event Driven Architecture
 
 ### Articles
 

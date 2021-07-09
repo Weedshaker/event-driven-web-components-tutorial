@@ -61,7 +61,7 @@ export default class TutorialFour extends HTMLElement {
       <ul>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks" target="_blank">Life cycles</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:host()" target="_blank">:host</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Destructuring assignment</a></li>
+        <li><a href="https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html" target="_blank">type-checking-javascript-files (optional)</a></li>
       </ul>
     `
   }

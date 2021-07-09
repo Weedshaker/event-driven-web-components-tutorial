@@ -7,7 +7,7 @@ export default class tutorialOne extends HTMLElement {
               <source src="../videos/eventDrivenWebComponentsTutorial1.mp4" type="video/mp4">
               <p>Your browser doesn't support HTML5 video. Here is a <a href="../videos/eventDrivenWebComponentsTutorial1.mp4">link to the video</a> instead.</p>
           </video>
-          <br>NOTE: Before "npm run serve" you need to install the packages by the command "npm install".
+          <br>NOTE: Before "npm run serve" you need to install the packages by the command "npm install" at Minute 6:30.
         </li>
       </ol>
       <ul>
