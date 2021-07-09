@@ -2,6 +2,14 @@ export default class tutorialOne extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* HTML */`
       <h2>Tutorial 1 - Setup</h2>
+      <ol>
+        <li><video controls="" width="80%" height="auto">
+              <source src="../videos/eventDrivenWebComponentsTutorial1.mp4" type="video/mp4">
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="../videos/eventDrivenWebComponentsTutorial1.mp4">link to the video</a> instead.</p>
+          </video>
+          <br>NOTE: Before "npm run serve" you need to install the packages by the command "npm install".
+        </li>
+      </ol>
       <ul>
         <li><a href="https://code.visualstudio.com/" target="_blank">Editor Visual Studio Code</a></li>
         <li><a href="https://github.com/" target="_blank">Github Account (optional)</a></li>

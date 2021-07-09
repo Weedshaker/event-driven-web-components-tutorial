@@ -2,6 +2,18 @@ export default class TutorialTwo extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /* HTML */`
       <h2>Tutorial 2 - Make a Web Component</h2>
+      <ol>
+        <li><video controls="" width="80%" height="auto">
+              <source src="../videos/eventDrivenWebComponentsTutorial2_1.mp4" type="video/mp4">
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="../videos/eventDrivenWebComponentsTutorial2_1.mp4">link to the video</a> instead.</p>
+          </video>
+        </li>
+        <li><video controls="" width="80%" height="auto">
+              <source src="../videos/eventDrivenWebComponentsTutorial2_2.mp4" type="video/mp4">
+              <p>Your browser doesn't support HTML5 video. Here is a <a href="../videos/eventDrivenWebComponentsTutorial2_2.mp4">link to the video</a> instead.</p>
+          </video>
+        </li>
+      </ol>
       <ul>
         <li><a href="https://code.visualstudio.com/docs/editor/emmet" target="_blank">Emmet (optional)</a></li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:defined" target="_blank">:defined</a></li>
