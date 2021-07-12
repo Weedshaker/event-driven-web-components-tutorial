@@ -4,6 +4,8 @@ export default class TutorialFour extends HTMLElement {
   constructor() {
     super()
     console.log('constructorFour')
+
+    this.attachShadow({ mode: 'open' })
   }
   connectedCallback() {
     console.log('connectedFour')
@@ -24,11 +26,11 @@ export default class TutorialFour extends HTMLElement {
   renderCSS() {
     const style = document.createElement('style')
     style.textContent = /* CSS */`
-      ${this.tagName} {
+      :host {
         color: pink;
       }
     `
-    this.appendChild(style)
+    this.shadowRoot.appendChild(style)
   }
   /**
    * checks if render is needed
@@ -39,7 +41,7 @@ export default class TutorialFour extends HTMLElement {
     return !this.innerHTML
   }
   renderHTML() {
-    this.innerHTML = /* HTML */`
+    this.shadowRoot.innerHTML = /* HTML */`
       <h2>Tutorial 4 - Structure and Type-Highlighting</h2>
       <ol>
         <li><video controls="" width="80%" height="auto">
