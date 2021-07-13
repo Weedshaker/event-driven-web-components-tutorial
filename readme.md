@@ -5,10 +5,7 @@
 
 ### TODO
 
- - Tutorial 5 - ShadowDom + https://github.com/Weedshaker/event-driven-web-components-prototypes/blob/master/src/Shadow.js
-   - https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow
-   - https://developer.mozilla.org/en-US/docs/Web/CSS/:host()
- - further Tutorials: ShadowDom + CSS variables, SideNavigation + Routing, Video Component, Event Driven Architecture
+ - further Tutorials: SideNavigation + Routing, Event Driven Architecture shown by scroll pos.
 
 ### Articles
 

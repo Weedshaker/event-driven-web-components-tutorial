@@ -1,36 +1,11 @@
 // @ts-check
 
-export default class TutorialFour extends HTMLElement {
-  constructor() {
-    super()
-    console.log('constructorFour')
+import Page from '../prototypes/Page.js'
 
-    this.attachShadow({ mode: 'open' })
-  }
+export default class TutorialFour extends Page {
   connectedCallback() {
-    console.log('connectedFour')
+    super.connectedCallback()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
-    if (this.shouldComponentRenderCSS()) this.renderCSS()
-  }
-  disconnectedCallback() {
-    console.log('disconnectedFour')
-  }
-  /**
-   * checks if render is needed
-   *
-   * @return {boolean}
-   */
-  shouldComponentRenderCSS() {
-    return !this.querySelector('style')
-  }
-  renderCSS() {
-    const style = document.createElement('style')
-    style.textContent = /* CSS */`
-      :host {
-        color: pink;
-      }
-    `
-    this.shadowRoot.appendChild(style)
   }
   /**
    * checks if render is needed
@@ -41,7 +16,7 @@ export default class TutorialFour extends HTMLElement {
     return !this.innerHTML
   }
   renderHTML() {
-    this.shadowRoot.innerHTML = /* HTML */`
+    this.html = /* HTML */`
       <h2>Tutorial 4 - Structure and Type-Highlighting</h2>
       <ol>
         <li><video controls="" width="80%" height="auto">

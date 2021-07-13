@@ -1,26 +1,11 @@
 // @ts-check
 
-export default class TutorialThree extends HTMLElement {
+import Page from '../prototypes/Page.js'
+
+export default class TutorialThree extends Page {
   connectedCallback() {
+    super.connectedCallback()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
-    if (this.shouldComponentRenderCSS()) this.renderCSS()
-  }
-  /**
-   * checks if render is needed
-   *
-   * @return {boolean}
-   */
-  shouldComponentRenderCSS() {
-    return !this.querySelector('style')
-  }
-  renderCSS() {
-    const style = document.createElement('style')
-    style.textContent = /* CSS */`
-      ${this.tagName} {
-        color: orange;
-      }
-    `
-    this.appendChild(style)
   }
   /**
    * checks if render is needed
@@ -31,7 +16,7 @@ export default class TutorialThree extends HTMLElement {
     return !this.innerHTML
   }
   renderHTML() {
-    this.innerHTML = /* HTML */`
+    this.html = /* HTML */`
       <h2>Tutorial 3 - Load a Web Component</h2>
       <ol>
         <li><video controls="" width="80%" height="auto">
