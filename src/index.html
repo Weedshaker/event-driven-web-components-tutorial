@@ -6,17 +6,17 @@
   <title>Event Driven Web Components Tutorial</title>
 </head>
 <body>
-  <tutorial-one></tutorial-one>
-  <tutorial-two></tutorial-two>
-  <tutorial-three></tutorial-three>
-  <tutorial-four></tutorial-four>
-  <tutorial-five></tutorial-five>
+  <c-router mode=hash routes="[
+    {
+      'name': 'tutorial-one',
+      'path': '../../../components/pages/TutorialOne.js',
+      'regExp': '/^#\/$/'
+    }
+  ]"></c-router>
   <script rel=preload type=module>
-    import('./components/pages/TutorialOne.js').then(module => customElements.define('tutorial-one', module.default))
-    import('./components/pages/TutorialTwo.js').then(module => customElements.define('tutorial-two', module.default))
-    import('./components/pages/TutorialThree.js').then(module => customElements.define('tutorial-three', module.default))
-    import('./components/pages/TutorialFour.js').then(module => customElements.define('tutorial-four', module.default))
-    import('./components/pages/TutorialFive.js').then(module => customElements.define('tutorial-five', module.default))
+    import('./components/event-driven-web-components-router/src/Router.js').then(module => {
+      if (!customElements.get('c-router')) customElements.define('c-router', module.default)
+    })
   </script>
   <style>
     html {
