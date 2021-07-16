@@ -1,4 +1,5 @@
 # [Event Driven Web Components Tutorial](https://weedshaker.github.io/event-driven-web-components-tutorial/src/#/)
+## ☝ the above covered tutorial/video material is this github repo source by itself
 
 
 ### Further Articles
