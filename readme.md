@@ -1,13 +1,7 @@
-# Event Driven Web Components Tutorial
-
-> Under construction... here are gonna be multiple topics covered.
+# [Event Driven Web Components Tutorial](https://weedshaker.github.io/event-driven-web-components-tutorial/src/#/)
 
 
-### TODO
-
- - further Tutorials: SideNavigation + Routing, Event Driven Architecture shown by scroll pos.
-
-### Articles
+### Further Articles
 
 - [Build an Event Driven TodoMVC App with 8 lightweight VanillaJS Web Components](https://dev.to/weedshaker/build-an-event-driven-todomvc-app-with-8-lightweight-vanillajs-web-components-5b65)
 - [DOM and the event driven architecture - Introduction](https://dev.to/weedshaker/dom-and-the-event-driven-architecture-1519)
