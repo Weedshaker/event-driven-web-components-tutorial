@@ -14,7 +14,7 @@ export default class Navigation extends Shadow() {
     self.addEventListener('hashchange', this.hashchangeListener)
     this.hashchangeListener()
   }
-  disconnectCallback() {
+  disconnectedCallback() {
     self.removeEventListener('hashchange', this.hashchangeListener)
   }
   /**
