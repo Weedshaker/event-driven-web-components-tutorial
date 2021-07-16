@@ -7,6 +7,7 @@ export default class Page extends Shadow() {
     super()
   }
   connectedCallback() {
+    if (this.shouldComponentRenderHTML()) this.renderHTML()
     if (this.shouldComponentRenderCSS()) this.renderCSS()
   }
   /**
@@ -14,8 +15,16 @@ export default class Page extends Shadow() {
    *
    * @return {boolean}
    */
+  shouldComponentRenderHTML() {
+    return !this.h2
+  }
+  /**
+   * checks if render is needed
+   *
+   * @return {boolean}
+   */
   shouldComponentRenderCSS() {
-    return !this.querySelector('style')
+    return !this.root.querySelector('style[_css]')
   }
   renderCSS() {
     this.css = /* CSS */`
@@ -23,5 +32,9 @@ export default class Page extends Shadow() {
         color: var(--color);
       }
     `
+  }
+
+  get h2 () {
+    return this.root.querySelector('h2')
   }
 }

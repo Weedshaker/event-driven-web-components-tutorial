@@ -3,18 +3,6 @@
 import Page from '../prototypes/Page.js'
 
 export default class TutorialTwo extends Page {
-  connectedCallback() {
-    super.connectedCallback()
-    if (this.shouldComponentRenderHTML()) this.renderHTML()
-  }
-  /**
-   * checks if render is needed
-   *
-   * @return {boolean}
-   */
-  shouldComponentRenderHTML() {
-    return !this.innerHTML
-  }
   renderHTML() {
     this.html = /* HTML */`
       <h2>Tutorial 2 - Make a Web Component</h2>

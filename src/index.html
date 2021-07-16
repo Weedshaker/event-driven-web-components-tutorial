@@ -6,14 +6,48 @@
   <title>Event Driven Web Components Tutorial</title>
 </head>
 <body>
+  <c-navigation></c-navigation>
   <c-router mode=hash routes="[
     {
       'name': 'tutorial-one',
       'path': '../../../components/pages/TutorialOne.js',
       'regExp': '/^#\/$/'
+    },
+    {
+      'name': 'tutorial-one',
+      'path': '../../../components/pages/TutorialOne.js',
+      'regExp': '/^#\/one/'
+    },
+    {
+      'name': 'tutorial-two',
+      'path': '../../../components/pages/TutorialTwo.js',
+      'regExp': '/^#\/two/'
+    },
+    {
+      'name': 'tutorial-three',
+      'path': '../../../components/pages/TutorialThree.js',
+      'regExp': '/^#\/three/'
+    },
+    {
+      'name': 'tutorial-four',
+      'path': '../../../components/pages/TutorialFour.js',
+      'regExp': '/^#\/four/'
+    },
+    {
+      'name': 'tutorial-five',
+      'path': '../../../components/pages/TutorialFive.js',
+      'regExp': '/^#\/five/'
+    },
+    {
+      'name': 'tutorial-six',
+      'path': '../../../components/pages/TutorialSix.js',
+      'regExp': '/^#\/six/'
     }
   ]"></c-router>
   <script rel=preload type=module>
+    import('./components/Navigation.js').then(module => {
+      if (!customElements.get('c-navigation')) customElements.define('c-navigation', module.default)
+    })
     import('./components/event-driven-web-components-router/src/Router.js').then(module => {
       if (!customElements.get('c-router')) customElements.define('c-router', module.default)
     })
