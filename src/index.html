@@ -42,6 +42,11 @@
       'name': 'tutorial-six',
       'path': '../../../components/pages/TutorialSix.js',
       'regExp': '/^#\/six/'
+    },
+    {
+      'name': 'tutorial-seven',
+      'path': '../../../components/pages/TutorialSeven.js',
+      'regExp': '/^#\/seven/'
     }
   ]"></c-router>
   <script rel=preload type=module>
@@ -51,10 +56,25 @@
     import('./components/event-driven-web-components-router/src/Router.js').then(module => {
       if (!customElements.get('c-router')) customElements.define('c-router', module.default)
     })
+    self.Environment = {
+      mobileBreakpoint: '600px'
+    }
   </script>
   <style>
     html {
-      --color: black;
+      --color: white;
+      --a-color: white;
+      --a-color-active: coral;
+      --a-color-hover: green;
+      --border: 2px solid green;
+      background-color: black;
+    }
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      width: 97vw;
     }
   </style>
 </body>

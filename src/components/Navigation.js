@@ -35,11 +35,26 @@ export default class Navigation extends Shadow() {
   }
   renderCSS() {
     this.css = /* CSS */`
+      :host, nav {
+        width: 40vw;
+      }
+      nav {
+        position: fixed;
+      }
       :host a {
-        color: green;
+        color: var(--a-color);
       }
       :host a.active {
-        color: red;
+        color: var(--a-color-active);
+      }
+      :host a:hover {
+        color: var(--a-color-hover);
+      }
+      @media only screen and (max-width: ${this.getAttribute('mobile-breakpoint') ? this.getAttribute('mobile-breakpoint') : self.Environment && !!self.Environment.mobileBreakpoint ? self.Environment.mobileBreakpoint : '1000px'}) {
+        nav {
+          position: inherit;
+          width: 100vw;
+        }
       }
     `
   }
@@ -53,6 +68,7 @@ export default class Navigation extends Shadow() {
           <li><a href="#/four">Tutorial 4 - Structure and Type-Highlighting</a></li>
           <li><a href="#/five">Tutorial 5 - ShadowDom</a></li>
           <li><a href="#/six">Tutorial 6 - Routing</a></li>
+          <li><a href="#/seven">Tutorial 7 - Event Driven</a></li>
         </ul>
       </nav>
     `
