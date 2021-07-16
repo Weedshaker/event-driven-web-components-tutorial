@@ -11,12 +11,14 @@ export default class Page extends Shadow() {
     this.playListener = event => this.videos.forEach(video => {
       if (video === event.target) {
         video.classList.add('playing')
+        video.requestFullscreen()
       } else {
         video.classList.remove('playing')
         video.pause()
       }
     })
     this.endedListener = event => {
+      if (document.fullscreenElement) document.exitFullscreen()
       let nextVideo = null
       if ((nextVideo = this.videos[this.videos.indexOf(event.target) + 1])) nextVideo.play()
     }
