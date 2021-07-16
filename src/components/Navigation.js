@@ -62,6 +62,7 @@ export default class Navigation extends Shadow() {
     this.html = /* HTML */`
       <nav>
         <ul>
+          <li><iframe class="gh-button" src="https://ghbtns.com/github-btn.html?user=Weedshaker&amp;repo=event-driven-web-components-tutorial&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe></li>
           <li><a href="#/one" alt-href="#/">Tutorial 1 - Setup</a></li>
           <li><a href="#/two">Tutorial 2 - Make a Web Component</a></li>
           <li><a href="#/three">Tutorial 3 - Load a Web Component</a></li>
