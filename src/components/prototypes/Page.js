@@ -11,6 +11,7 @@ export default class Page extends Shadow() {
     this.playListener = event => this.videos.forEach(video => {
       if (video === event.target) {
         video.classList.add('playing')
+        video.scrollIntoView()
         video.requestFullscreen()
       } else {
         video.classList.remove('playing')
