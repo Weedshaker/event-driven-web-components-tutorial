@@ -3,7 +3,7 @@
 import Page from '../prototypes/Page.js'
 
 export default class TutorialSix extends Page {
-  renderHTML() {
+  renderHTML () {
     this.html = /* HTML */`
       <h2>Tutorial 7 - Event Driven</h2>
       <ol>

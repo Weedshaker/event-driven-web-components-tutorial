@@ -3,7 +3,7 @@
 import Page from '../prototypes/Page.js'
 
 export default class TutorialOne extends Page {
-  renderHTML() {
+  renderHTML () {
     this.html = /* HTML */`
       <h2>Tutorial 1 - Setup</h2>
       <ol>

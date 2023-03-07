@@ -1,13 +1,15 @@
 // @ts-check
 
-import {Shadow} from '../event-driven-web-components-prototypes/src/Shadow.js'
+import { Shadow } from '../event-driven-web-components-prototypes/src/Shadow.js'
+
+/* global self */
 
 export default class Page extends Shadow() {
-  constructor() {
+  constructor () {
     super()
 
     this.scrollY = 0
-    this.routeListener = event => this.scrollY = self.scrollY
+    this.routeListener = event => (this.scrollY = self.scrollY)
     this.playListener = event => this.videos.forEach(video => {
       if (video === event.target) {
         video.classList.add('playing')
@@ -24,36 +26,41 @@ export default class Page extends Shadow() {
       if ((nextVideo = this.videos[this.videos.indexOf(event.target) + 1])) nextVideo.play()
     }
   }
-  connectedCallback() {
+
+  connectedCallback () {
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     document.body.addEventListener('route', this.routeListener)
-    this.root.addEventListener('play', this.playListener, {capture: true})
-    this.root.addEventListener('ended', this.endedListener, {capture: true})
+    this.root.addEventListener('play', this.playListener, { capture: true })
+    this.root.addEventListener('ended', this.endedListener, { capture: true })
     self.scrollTo(0, this.scrollY)
   }
+
   disconnectedCallback () {
     document.body.removeEventListener('route', this.routeListener)
     this.root.removeEventListener('play', this.playListener)
     this.root.removeEventListener('ended', this.endedListener)
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.h2
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector('style[_css]')
   }
-  renderCSS() {
+
+  renderCSS () {
     this.css = /* CSS */`
       :host {
         display: block;

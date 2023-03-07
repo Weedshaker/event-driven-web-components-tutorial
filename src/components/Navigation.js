@@ -1,6 +1,9 @@
 // @ts-check
 
-import {Shadow} from './event-driven-web-components-prototypes/src/Shadow.js'
+import { Shadow } from './event-driven-web-components-prototypes/src/Shadow.js'
+
+/* global location */
+/* global self */
 
 export default class Navigation extends Shadow() {
   constructor () {
@@ -8,32 +11,37 @@ export default class Navigation extends Shadow() {
 
     this.hashchangeListener = event => this.as.forEach(a => a.classList[location.hash === a.getAttribute('href') || location.hash === a.getAttribute('alt-href') ? 'add' : 'remove']('active'))
   }
-  connectedCallback() {
+
+  connectedCallback () {
     if (this.shouldComponentRenderCSS()) this.renderCSS()
     if (this.shouldComponentRenderHTML()) this.renderHTML()
     self.addEventListener('hashchange', this.hashchangeListener)
     this.hashchangeListener()
   }
-  disconnectedCallback() {
+
+  disconnectedCallback () {
     self.removeEventListener('hashchange', this.hashchangeListener)
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderCSS() {
+  shouldComponentRenderCSS () {
     return !this.root.querySelector('style[_css]')
   }
+
   /**
    * checks if render is needed
    *
    * @return {boolean}
    */
-  shouldComponentRenderHTML() {
+  shouldComponentRenderHTML () {
     return !this.nav
   }
-  renderCSS() {
+
+  renderCSS () {
     this.css = /* CSS */`
       :host, nav {
         width: 40vw;
@@ -58,7 +66,8 @@ export default class Navigation extends Shadow() {
       }
     `
   }
-  renderHTML() {
+
+  renderHTML () {
     this.html = /* HTML */`
       <nav>
         <ul>
@@ -74,9 +83,11 @@ export default class Navigation extends Shadow() {
       </nav>
     `
   }
+
   get nav () {
     return this.root.querySelector('nav')
   }
+
   get as () {
     return Array.from(this.root.querySelectorAll('a'))
   }

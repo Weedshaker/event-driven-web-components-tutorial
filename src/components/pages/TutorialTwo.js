@@ -3,7 +3,7 @@
 import Page from '../prototypes/Page.js'
 
 export default class TutorialTwo extends Page {
-  renderHTML() {
+  renderHTML () {
     this.html = /* HTML */`
       <h2>Tutorial 2 - Make a Web Component</h2>
       <ol>
